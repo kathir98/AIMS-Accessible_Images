@@ -14,7 +14,11 @@ ii) AIMS browser extension
 
 
 
-  ![image](https://github.com/kathir98/AIMS-Accessible_Images/assets/61177402/792da0bc-1513-46a6-b955-b33b3ac0afd6)  
+  ![image](https://github.com/kathir98/AIMS-Accessible_Images/assets/61177402/792da0bc-1513-46a6-b955-b33b3ac0afd6)
+
+  #### *<ins>Note </ins>: I'm using ImageAI python library to perfrom object detection using already trained "resnet50_coco_best_v2.0.1.h5" module.*
+  #### *You can train your own ML module or use resnet module (resnet50_coco_best_v2.0.1.h5) which I used by downloading it from internet.*
+
 
   ## AIMS Extension
 

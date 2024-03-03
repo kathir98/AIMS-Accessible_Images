@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Steganography</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <script src="{{url_for('static', filename='steganography.min.js')}}"></script>
+  </head>
+  <body>
+    <div class="cont">
+<br>
+       <center>
+        <h1 style="color:green;">AIMS BUILDER </h1>
+        <strong>Making Images Accessible</strong>
+       </center><br><br><br>
+
+        <div id="uinput" style="display: inherit;">
+            <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+            <input
+          class="ui primary button"
+          type="file"
+          name="pic"
+          accept="image/*"
+          onchange="readURL(this);"
+        />
+<!--            <div class="ui input">-->
+<!--              <input id="text" type="text" />-->
+<!--            </div>-->
+        <button class="ui secondary button" style="height: 42px;"> Analyse </button>
+        </form>
+            <button id="hidetext_button" class="ui secondary button" onclick="hideText()">
+          Hide Message Into Image
+        </button>
+        </div>
+        <br>
+      {% for mesg in get_flashed_messages() %}
+        <p class="errormsg">{{ mesg }}</p>
+      {% endfor %}
+
+        <div class="img-cont">
+          <div  class="img1">
+            <h5>Source Image</h5>
+
+            <img id="image1" src="{{imagename}}" alt="" />
+          </div>
+
+
+          <div class="">
+            <h5>Message Encoded Image</h5>
+            <img id="image2" src="" alt="" />
+
+          </div>
+
+        </div>
+
+<!--        <div class="ui input">-->
+<!--              <input id="result_text" type="text" value={{result}}/>-->
+<!--        </div><br>-->
+        <h5 id="result_text">{{result}}</h5>
+<!--<script>-->
+<!--if((document.querySelector('#result_text').innerHTML)!=null || (document.querySelector('#result_text').innerHTML)!='' )-->
+<!--{-->
+<!--  console.log("in if stmt");-->
+<!--  document.getElementById('hidetext_button').click();-->
+<!--}-->
+<!--</script>-->
+
+<!--    <div class="">-->
+
+<!--      <input class="ui secondary button" type="file" name="pic" accept="image/*" onchange="decode(this);" />-->
+<!--      <img class = "opa" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">-->
+<!--      <h5>Decoded Text:</h5>-->
+<!--      <h5 id="decoded"></h5>-->
+<!--    </div>-->
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+  </body>
+</html>
+
+
+
+
+    </div>
+
+
+
+

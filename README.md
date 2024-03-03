@@ -45,5 +45,5 @@ ii) AIMS browser extension
 
   Note : you can test the same using the test website - Mediumish created using annotated images by running the simple local php/python server.
 
-  #### *Detialed descreption document is present in Document folder, feel freee to chec it out..*
+  #### *Detialed descreption document is present in Document folder, feel free to check it out..*
   
